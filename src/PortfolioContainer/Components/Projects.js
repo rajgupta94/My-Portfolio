@@ -18,7 +18,7 @@ const Projects = () => {
                         </p>
                     </div>
                     <div className="resume-clg-time resume-clg-time4">
-                        <div><a href="https://aarvis.herokuapp.com/" target="_blank">View</a></div>
+                        <div><a href="https://aarvis.herokuapp.com/" target="_blank" rel="noopener noreferrer">View</a></div>
                         
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const Projects = () => {
                         </p>
                     </div>
                     <div className="resume-clg-time resume-clg-time4">
-                        <div><a target="_blank" href="https://livetempreture.herokuapp.com/">View</a></div>
+                        <div><a target="_blank" href="https://livetempreture.herokuapp.com/" rel="noopener noreferrer">View</a></div>
                     </div>
                 </div>
                 <div className="resume-detail-main resume-detail-main4">
@@ -51,7 +51,7 @@ const Projects = () => {
                         </p>
                     </div>
                     <div className="resume-clg-time resume-clg-time4">
-                        <div><a target="_blank" href="https://myfirstmernweb.herokuapp.com/">View</a></div>
+                        <div><a target="_blank" href="https://myfirstmernweb.herokuapp.com/" rel="noopener noreferrer">View</a></div>
                     </div>
                 </div>
                 <div className="resume-detail-main resume-detail-main4">
@@ -67,7 +67,7 @@ const Projects = () => {
                         </p>
                     </div>
                     <div className="resume-clg-time resume-clg-time4">
-                        <div><a target="_blank" href="https://aman97703.github.io/snakegame">View</a></div>
+                        <div><a target="_blank" href="https://aman97703.github.io/snakegame" rel="noopener noreferrer">View</a></div>
                     </div>
                 </div>
                
