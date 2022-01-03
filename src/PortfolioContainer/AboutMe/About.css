@@ -1,0 +1,124 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh);
+}
+
+.about-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+    height: 95%;
+}
+
+.about-head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3px;
+}
+
+.about-head h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3.1rem;
+    letter-spacing: 1.4px;
+    text-shadow: 4px 5px 4px #d6cece;
+}
+
+.about-head p {
+    letter-spacing: 3.5px;
+    word-spacing: 4px;
+    text-shadow: 2px 5px 4px #d6cece;
+}
+
+.about-main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0px 2px 4px 1px #d1cece;
+}
+
+.about-me-para p {
+    font-weight: 400;
+    word-spacing: 20px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+}
+
+.about-me-highlights {
+    margin-top: 2rem;
+}
+
+.about-me-highlights p {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.about-me-highlights ul {
+    list-style: none;
+}
+
+.about-me-highlights ul li::before {
+    content: "\205C";
+    color: #ff5823;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 0.5em;
+    font-size: 20px;
+}
+
+.about-me-highlights ul li {
+    letter-spacing: 1.3px;
+    word-spacing: 2.2px;
+    font-size: 15px;
+}
+
+.about-container .profile-options {
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 30px;
+    width: 60%;
+}
+
+@media screen and (max-width:890px) {
+    .about-head h1{
+        font-size: 2.8rem;
+    }
+    .about-me-para p{
+        word-spacing: 10px;
+        letter-spacing: 0.5px;
+    }
+    .about-me-highlights ul li {
+        letter-spacing: 1px;
+        word-spacing: 0.2px;
+    }
+}
+@media screen and (max-width:830px) {
+    .about-me-highlights{
+        margin-top: 0;
+    }
+    .about-main{
+        padding: 20px;
+    }
+}
+@media screen and (max-width:765px) {
+    .about-container .profile-options{
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width:500px) {
+    .about-container .profile-options{
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}

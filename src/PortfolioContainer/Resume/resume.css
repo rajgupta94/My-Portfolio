@@ -1,0 +1,160 @@
+.resume-main {
+    width: 100%;
+    display: flex;
+    margin-top: 4rem;
+}
+
+.resume-main .css-1n3h4wo {
+    height: fit-content;
+}
+
+.resume-main .css-35zqo5-MuiTabs-root .MuiTabs-scrollButtons {
+    display: none;
+}
+
+.resume-main .css-aym9vq-MuiButtonBase-root-MuiTab-root {
+    display: inline-block;
+}
+
+.resume-main .css-aym9vq-MuiButtonBase-root-MuiTab-root svg {
+    margin-right: 10px;
+}
+
+.resume-main-icons {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 0 5px;
+}
+
+.resume-icons {
+    background: #24263b;
+}
+
+.resume-main-icons button {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+.resume-main .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    padding: 0;
+    text-align: start;
+    display: flex;
+    color: black;
+    align-items: flex-start;
+    margin-top: 23px;
+    margin-bottom: -5px;
+    outline: none;
+    padding-left: 26px;
+    font-weight: 600;
+    padding-right: 30px;
+}
+.resume-main .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: white;
+    background: #24263b;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: 0.5s ease-in-out;
+}
+.resume-main .css-10d9dml-MuiTabs-indicator{
+    display: none;
+}
+
+.resume-main .css-35zqo5-MuiTabs-root {
+    border-right: 2px solid;
+    border-color: rgba(0, 0, 0, 0.3);
+    padding-right: 40px;
+    box-shadow: 2px 0px 0px 0px #dfdbdb;
+}
+
+@media screen and (max-width:990px) {
+    .about-head{
+        margin-top: 3rem;
+    }
+    .css-1l0r181 {
+        display: flex;
+        flex-direction: column;
+    }
+    .resume-main .css-35zqo5-MuiTabs-root {
+        width: 65%;
+    }
+    .resume-icons{
+        height: fit-content;
+    }
+    .resume-main div#vertical-tabpanel-0 {
+        width: 100% !important;
+        margin-top: 45px;
+        margin-left: -4em;
+    }
+    .resume-main div#vertical-tabpanel-1 {
+        width: 100% !important;
+        margin-top: 45px;
+        margin-left: -4em;
+    }
+    .resume-main div#vertical-tabpanel-2 {
+        width: 100% !important;
+        margin-top: 45px;
+        margin-left: -4em;
+    }
+    .resume-main div#vertical-tabpanel-3 {
+        width: 100% !important;
+        margin-top: 45px;
+        margin-left: -4em;
+    }
+    .resume-main div#vertical-tabpanel-4 {
+        width: 100% !important;
+        margin-top: 45px;
+        margin-left: -4em;
+    }
+    .about-container{
+        height: max-content;
+    }
+    .resume-main .css-35zqo5-MuiTabs-root{
+        border: none;
+        box-shadow: none;
+    }
+
+}
+
+@media screen and (max-width:690px) {
+    .about-root{
+        width: 90%;
+    }
+    .resume-main div#vertical-tabpanel-0 {
+        width: 125% !important;
+        margin-top: 45px;
+        
+    }
+    .resume-main div#vertical-tabpanel-1 {
+        width: 125% !important;
+        margin-top: 45px;
+    }
+    .resume-main div#vertical-tabpanel-2 {
+        width: 125% !important;
+        margin-top: 45px;
+    }
+    .resume-main div#vertical-tabpanel-3 {
+        width: 125% !important;
+        margin-top: 45px;
+    }
+    .resume-main div#vertical-tabpanel-4{
+        width: 125% !important;
+        margin-top: 45px;
+    }
+    .resume-main .css-35zqo5-MuiTabs-root {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .resume-college-info2 p{
+        display: none;
+    }
+    .resume-clg-time div{
+        font-size: 11px !important;
+        padding: 7px !important;
+    }
+    .resume-college-info h5{
+        font-size: 18px !important;
+    }
+}

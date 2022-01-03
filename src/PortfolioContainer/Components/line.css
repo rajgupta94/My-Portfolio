@@ -1,0 +1,25 @@
+.lineBar-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line-bar-cont {
+    width: 320px;
+    position: relative;   
+}
+.line-bar-cont div:first-child {
+    background: black;
+    height: 2px;
+    border-radius: 10px;
+}
+.line-bar-cont div:last-child {
+    background: #ff5823;
+    height: 10px;
+    border-radius: 10px;
+    width: 90px;
+    top: -4px;
+    position: absolute;
+    left: 34%;
+    /* transform: translate(-50%, -77%); */
+}

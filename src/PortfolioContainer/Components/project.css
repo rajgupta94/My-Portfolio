@@ -1,0 +1,23 @@
+.resume-detail-main4 {
+    margin-bottom: 0;
+}
+.resume-college-info4 h5 {
+    font-size: 17px;
+    margin-bottom: 0;
+}
+p.tecUsed {
+    margin: 0;
+    margin-left: 1.5em;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+p.tecUsed span{
+    font-weight: 700;
+}
+.resume-clg-time4 div{
+    width: 70px;
+}
+.resume-clg-time.resume-clg-time4 a {
+    color: white;
+    text-decoration: none;
+}
