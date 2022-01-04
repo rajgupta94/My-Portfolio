@@ -36,7 +36,7 @@
     color: white;
     outline: none;
 }
-.resume-main .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+.resume-main .resume-tabs {
     padding: 0;
     text-align: start;
     display: flex;
@@ -49,18 +49,18 @@
     font-weight: 600;
     padding-right: 30px;
 }
-.resume-main .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+.resume-main .resume-tabs.Mui-selected {
     color: white;
     background: #24263b;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     transition: 0.5s ease-in-out;
 }
-.resume-main .css-10d9dml-MuiTabs-indicator{
+.resume-main .MuiTabs-indicator{
     display: none;
 }
 
-.resume-main .css-35zqo5-MuiTabs-root {
+.resume-main .MuiTabs-vertical {
     border-right: 2px solid;
     border-color: rgba(0, 0, 0, 0.3);
     padding-right: 40px;
@@ -81,27 +81,7 @@
     .resume-icons{
         height: fit-content;
     }
-    .resume-main div#vertical-tabpanel-0 {
-        width: 100% !important;
-        margin-top: 45px;
-        margin-left: -4em;
-    }
-    .resume-main div#vertical-tabpanel-1 {
-        width: 100% !important;
-        margin-top: 45px;
-        margin-left: -4em;
-    }
-    .resume-main div#vertical-tabpanel-2 {
-        width: 100% !important;
-        margin-top: 45px;
-        margin-left: -4em;
-    }
-    .resume-main div#vertical-tabpanel-3 {
-        width: 100% !important;
-        margin-top: 45px;
-        margin-left: -4em;
-    }
-    .resume-main div#vertical-tabpanel-4 {
+    .resume-main .resume-tabpanel {
         width: 100% !important;
         margin-top: 45px;
         margin-left: -4em;
@@ -120,26 +100,10 @@
     .about-root{
         width: 90%;
     }
-    .resume-main div#vertical-tabpanel-0 {
+    .resume-main .resume-tabpanel {
         width: 125% !important;
         margin-top: 45px;
         
-    }
-    .resume-main div#vertical-tabpanel-1 {
-        width: 125% !important;
-        margin-top: 45px;
-    }
-    .resume-main div#vertical-tabpanel-2 {
-        width: 125% !important;
-        margin-top: 45px;
-    }
-    .resume-main div#vertical-tabpanel-3 {
-        width: 125% !important;
-        margin-top: 45px;
-    }
-    .resume-main div#vertical-tabpanel-4{
-        width: 125% !important;
-        margin-top: 45px;
     }
     .resume-main .css-35zqo5-MuiTabs-root {
         width: 100%;

@@ -92,30 +92,31 @@ const Resume = () => {
                             <Tabs
                                 orientation="vertical"
                                 variant="scrollable"
+                                className='resume-tabs-root'
                                 value={value}
                                 onChange={handleChange}
                                 aria-label="Vertical tabs example"
                                 sx={{ borderRight: 1, borderColor: 'divider' }}
                             >
-                                <Tab label="Education" {...a11yProps(0)} />
-                                <Tab label="Work History" {...a11yProps(1)} />
-                                <Tab label="Programming Skills" {...a11yProps(2)} />
-                                <Tab label="Projects" {...a11yProps(3)} />
-                                <Tab label=" Award/Certicates" {...a11yProps(4)} />
+                                <Tab className='resume-tabs' label="Education" {...a11yProps(0)} />
+                                <Tab className='resume-tabs' label="Work History" {...a11yProps(1)} />
+                                <Tab className='resume-tabs' label="Programming Skills" {...a11yProps(2)} />
+                                <Tab className='resume-tabs' label="Projects" {...a11yProps(3)} />
+                                <Tab className='resume-tabs' label=" Award/Certicates" {...a11yProps(4)} />
                             </Tabs>
-                            <TabPanel value={value} index={0}>
+                            <TabPanel className="resume-tabpanel" value={value} index={0}>
                                 <Education/>
                             </TabPanel>
-                            <TabPanel value={value} index={1}>
+                            <TabPanel className="resume-tabpanel" value={value} index={1}>
                                 <WorkHistory/>
                             </TabPanel>
-                            <TabPanel value={value} index={2}>
+                            <TabPanel className="resume-tabpanel" value={value} index={2}>
                                 <ProgrammingSkill/>
                             </TabPanel>
-                            <TabPanel value={value} index={3}>
+                            <TabPanel className="resume-tabpanel" value={value} index={3}>
                                 <Projects/>
                             </TabPanel>
-                            <TabPanel value={value} index={4}>
+                            <TabPanel className="resume-tabpanel" value={value} index={4}>
                                 <Awards/>
                             </TabPanel>
 
