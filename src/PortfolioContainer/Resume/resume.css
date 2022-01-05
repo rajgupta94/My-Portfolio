@@ -8,7 +8,7 @@
     height: fit-content;
 }
 
-.resume-main .css-35zqo5-MuiTabs-root .MuiTabs-scrollButtons {
+.resume-main .MuiTabs-scrollButtons {
     display: none;
 }
 
@@ -66,9 +66,15 @@
     padding-right: 40px;
     box-shadow: 2px 0px 0px 0px #dfdbdb;
 }
+.resume-main .MuiSvgIcon-fontSizeSmall{
+    display: none;
+}
+.MuiTabs-scrollButtonsHideMobile {
+    display: none;
+}
 
 @media screen and (max-width:990px) {
-    .about-head{
+    .about-head{ 
         margin-top: 3rem;
     }
     .css-1l0r181 {
