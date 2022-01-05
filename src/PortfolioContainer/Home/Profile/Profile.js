@@ -1,10 +1,8 @@
 import React from 'react';
 import './profile.css';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import GoogleIcon from '@mui/icons-material/Google';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Typical from "react-typical"
 
@@ -17,12 +15,10 @@ const Profile = () => {
                     <div className="profile-details">
                         <div className="colz">
                             <div className="colz-icons">
-                                <a href="/"><FacebookIcon /></a>
-                                <a href="/"><GoogleIcon /></a>
-                                <a href="/"><InstagramIcon /></a>
-                                <a href="/"><TwitterIcon /></a>
-                                <a href="/"><YouTubeIcon /></a>
-                                <a href="/"><LinkedInIcon /></a>
+                                <a href="https://www.linkedin.com/in/aman97703"><LinkedInIcon /></a>
+                                <a href="https://github.com/aman97703"><GitHubIcon /></a>
+                                <a href="mailto:aman97703@gmail.com"><AlternateEmailIcon /></a>
+                                <a href="https://www.instagram.com/aman97703"><InstagramIcon /></a>
                             </div>
                         </div>
                         <div className="profile-details-name">

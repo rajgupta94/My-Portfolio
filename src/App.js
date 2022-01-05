@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import Aboutme from './PortfolioContainer/AboutMe/Aboutme'
 import Contactme from './PortfolioContainer/ContactMe/Contactme'
@@ -7,7 +7,6 @@ import Resume from './PortfolioContainer/Resume/Resume'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 const App = () => {
-  const [scroll, setScroll] = useState(0);
   window.onscroll = function(){scrollFunction()};
   const scrollFunction = ()=>{
     if(document.documentElement.scrollTop < 40)
@@ -26,7 +25,7 @@ const App = () => {
     else{
       document.getElementById('scroll').style.display = "block";
     }
-  },[scroll])
+  },[])
 
   const setScrollHeight = ()=>{
     document.documentElement.scrollTop = 0
