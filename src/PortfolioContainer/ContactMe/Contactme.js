@@ -11,7 +11,7 @@ import SendIcon from '@mui/icons-material/Send';
 const Contactme = () => {
     return (
         <>
-            <div className="about-container contact-container">
+            <div id='contact' className="about-container contact-container">
                 <div className="about-root">
                     <div className="about-head">
                         <h1>Contact Me</h1>

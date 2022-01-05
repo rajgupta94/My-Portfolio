@@ -12,16 +12,16 @@ const Navbar = () => {
                     <div className="navbar-anchors">
                         <ul className="navbar-ul">
                             <li className="navbar-li ">
-                                <a href="/" className="navlink-main active-link">Home</a>
+                                <a href="#home" className="navlink-main active-link">Home</a>
                             </li>
                             <li className="navbar-li">
-                                <a href="/" className="navlink-main">About Me</a>
+                                <a href="#about" className="navlink-main">About Me</a>
                             </li>
                             <li className="navbar-li">
-                                <a href="/" className="navlink-main">Resume</a>
+                                <a href="#resume" className="navlink-main">Resume</a>
                             </li>
                             <li className="navbar-li">
-                                <a href="/" className="navlink-main">ContactMe</a>
+                                <a href="#contact" className="navlink-main">ContactMe</a>
                             </li>
                         </ul>
                     </div>

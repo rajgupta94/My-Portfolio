@@ -18,3 +18,17 @@
   --toast-success: #0CBFAE;
   --loader-color: #0CBFAE
 }
+.scroll-up {
+  position: fixed;
+  right: 40px;
+  bottom: 35px;
+}
+.scroll-up button {
+  background: #ff5823;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px 0px #bfb6b6;
+}

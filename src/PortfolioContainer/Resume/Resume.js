@@ -59,7 +59,7 @@ const Resume = () => {
 
     return (
         <>
-            <div className="about-container">
+            <div id='resume' className="about-container">
                 <div className="about-root">
                     <div className="about-head">
                         <h1>Resume</h1>
