@@ -16,16 +16,18 @@ const Aboutme = () => {
                     </div>
                     <div className="about-main">
                         <div className="about-me-para">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae exercitationem fuga molestiae minima officiis accusantium ex deleniti voluptatum ducimus porro? Eum obcaecati voluptates sapiente id veritatis illum hic iusto natus!</p>
+                            <p>
+                                Hello, I'm Aman Gupta. I am an Engineering Student of Dr. Rammanohar Lohia Avadh Univerisity Faizabad, Ayodhya (UP) with an aggregate score of 77%. I am currently in Final year. I have interest in web development. I have done many projects Some of them in my resume (please check it out).  
+                            </p>
                         </div>
                         <div className="about-me-highlights">
                             <p>Here are few Highlights:</p>
                             <ul>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit</li>
+                                <li>Full Stack Web Developer</li>
+                                <li>Interactive Front-end as per the design</li>
+                                <li>React Developer</li>
+                                <li>Connect Api's</li>
+                                <li>Managing Databases</li>
                             </ul>
                         </div>
                         <div className="profile-options">
