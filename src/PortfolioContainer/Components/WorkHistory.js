@@ -16,13 +16,13 @@ const WorkHistory = () => {
                 </div>
                 <div className="resume-detail-main resume-detail-main2">
                     <div className="resume-college-info resume-college-info2">
-                        <h5>React Developer - <span>VCBay</span></h5>
+                        <h5>Mern Stack Developer - <span>VCBay</span></h5>
                         <p>
                             Build Website using Mern Stack. Primary my role is to design frontend part of Website and connect API's.
                         </p>
                     </div>
                     <div className="resume-clg-time resume-clg-time2">
-                        <div>Aug 2021 - ____</div>
+                        <div>Aug 2021 - Present</div>
                     </div>
                 </div>
 

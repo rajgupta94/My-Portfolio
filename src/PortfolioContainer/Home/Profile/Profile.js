@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import './profile.css';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -7,7 +7,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Typical from "react-typical"
 
 const Profile = () => {
-
     return (
         <>
             <div className="profile-container">
@@ -23,7 +22,7 @@ const Profile = () => {
                         </div>
                         <div className="profile-details-name">
                             <span className="primary-text">
-                                Hello, I'M <span className="highlighted-text">Aman Gupta</span>
+                                Hello, I'M <span className="highlighted-text">Aman Gupta {localStorage.getItem('count')} </span>
                             </span>
                         </div>
                         <div className="profile-details-role">
