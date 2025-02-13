@@ -17,13 +17,13 @@ const Aboutme = () => {
                     <div className="about-main">
                         <div className="about-me-para">
                             <p>
-                                Hello, I'm Aman Gupta. I am an Engineering Student of Dr. Rammanohar Lohia Avadh Univerisity Faizabad, Ayodhya (UP) with an aggregate score of 77%. I am currently in Final year. I have interest in web development. I have done many projects Some of them in my resume (please check it out).  
+                                Hello, I'm Raj Gupta. I am an Engineering Student of shri siddhi  vinayak group of institution  I am currently in Third year. I have interest in web development. I have done many projects Some of them in my resume (please check it out).  
                             </p>
                         </div>
                         <div className="about-me-highlights">
                             <p>Here are few Highlights:</p>
                             <ul>
-                                <li>Full Stack Web Developer</li>
+                                {/* <li>Full Stack Web Developer</li> */}
                                 <li>Interactive Front-end as per the design</li>
                                 <li>React Developer</li>
                                 <li>Connect Api's</li>

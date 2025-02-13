@@ -14,15 +14,14 @@ const Profile = () => {
                     <div className="profile-details">
                         <div className="colz">
                             <div className="colz-icons">
-                                <a href="https://www.linkedin.com/in/aman97703"><LinkedInIcon /></a>
-                                <a href="https://github.com/aman97703"><GitHubIcon /></a>
-                                <a href="mailto:aman97703@gmail.com"><AlternateEmailIcon /></a>
-                                <a href="https://www.instagram.com/aman97703"><InstagramIcon /></a>
+                                <a href="https://www.linkedin.com/in/raj-gupta-a41118264"><LinkedInIcon /></a>
+                                <a href="https://github.com/"><GitHubIcon /></a>
+                                <a href="mailto:rajgupta84639@gmail.com"><AlternateEmailIcon /></a>
                             </div>
                         </div>
                         <div className="profile-details-name">
                             <span className="primary-text">
-                                Hello, I'M <span className="highlighted-text">Aman Gupta {localStorage.getItem('count')} </span>
+                                Hello, I'M <span className="highlighted-text">Raj Gupta {localStorage.getItem('count')} </span>
                             </span>
                         </div>
                         <div className="profile-details-role">
@@ -31,7 +30,7 @@ const Profile = () => {
                                     <Typical
                                         loop={Infinity}
                                         steps={[
-                                            "Aman Gupta Dev 🔴", 1200,
+                                            "Raj Gupta Dev 🔴", 1200,
                                             "Frontend Developer 😎", 1200,
                                             "Mern Stack Dev 💻", 1200,
                                             "React Js Developer 😍", 1200,

@@ -8,28 +8,28 @@ const Education = () => {
                 <div className="resume-detail-main">
                     <div className="resume-college-info">
                         <h5>Bachelor of Technology (Information Technology) </h5>
-                        <p>Dr. Rammanohar Lohia Avadh University Faizabad UP</p>
+                        <p>Shri siddhi vinayak group of institution</p>
                     </div>
                     <div className="resume-clg-time">
-                        <div>2018-2022</div>
+                        <div>2022-2027</div>
                     </div>
                 </div>
                 <div className="resume-detail-main">
                     <div className="resume-college-info">
                         <h5>Senior Secondary (intermediate) </h5>
-                        <p>Saraswati Vidhya Mandir Inter College Milak Rampur</p>
+                        <p>Handa public School (CBSE BOARD)</p>
                     </div>
                     <div className="resume-clg-time">
-                        <div>2017-2018</div>
+                        <div>2021-2022</div>
                     </div>
                 </div>
                 <div className="resume-detail-main">
                     <div className="resume-college-info">
                         <h5>High School </h5>
-                        <p>Saraswati Vidhya Mandir Inter College Milak Rampur</p>
+                        <p>Handa public School (CBSE BOARD)</p>
                     </div>
                     <div className="resume-clg-time">
-                        <div>2015-2016</div>
+                        <div>2018-2019</div>
                     </div>
                 </div>
             </div>

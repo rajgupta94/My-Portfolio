@@ -8,13 +8,13 @@ const ProgrammingSkill = () => {
                 <div className="resume-detail-main resume-detail-main3">
                     <div className="resume-college-info">
                         <h5>Programming Languages </h5>
-                        <p>JavaScript, C, C++, Python</p>
+                        <p>JavaScript, C, C++</p>
                     </div>
                 </div>
                 <div className="resume-detail-main resume-detail-main3">
                     <div className="resume-college-info">
                         <h5>Web Technologies</h5>
-                        <p>HTML5, CSS, Bootstrap, JavaScript, Node Js, express Js, React JS, Socket, React-Reudx Restful API&apos;s </p>
+                        <p>HTML5, CSS, Tailwind CSS, JavaScript, Node Js, Next Js, React JS, Socket, React-Reudx Restful API&apos;s </p>
                     </div>
                 </div>
                 <div className="resume-detail-main resume-detail-main3">

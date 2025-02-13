@@ -28,19 +28,19 @@ const Contactme = () => {
                             <div className="contact-left">
                                 <div>
                                     <span><CallIcon /></span>
-                                    <a href="tel:+91-8218525893">8218525893</a>
+                                    <a href="tel:+91-8218525893">9410812659</a>
                                 </div>
                                 <div>
                                     <span><AlternateEmailIcon /></span>
-                                    <a href="mailto:aman97703@gmail.com">aman97703@gmail.com</a>
+                                    <a href="mailto:rajgupta84639@gmail.com">rajgupta8469@gmail.com</a>
                                 </div>
                                 <div>
                                     <span><GitHubIcon /></span>
-                                    <a href="https://github.com/aman97703">aman97703</a>
+                                    <a href="https://github.com/">raj8859</a>
                                 </div>
                                 <div>
                                     <span><LinkedInIcon /></span>
-                                    <a href="https://www.linkedin.com/in/aman97703">aman97703</a>
+                                    <a href="https://www.linkedin.com/in/raj-gupta-a41118264">raj8859</a>
                                 </div>
                             </div>
                             <div className="contact-right">
