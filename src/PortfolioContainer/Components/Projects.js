@@ -7,56 +7,63 @@ const Projects = () => {
             <div className="resume-details-container">
             <div className="resume-detail-main resume-detail-main4">
                     <div className="resume-college-info">
-                        <h5>Paw-haven </h5>
+                        <h5>Animal_Cruelty_Web</h5>
                         <p className="tecUsed">
                             <span>Technology Used :- </span>
-                           Express Js, Node js, React js, MongoDb
+                        React, good vanilla css, Tailwind css, ShadCN, FramerMotion
                         </p>
                         <p className="tecUsed">
                             <span>Description :- </span>
-                            Paw haven is a website which is developed for helping the street dogs. It is like a bridge which connect person to ngo's who want to help street dogs. They can do community post of their dogs.  
+                            Animal Cruelty Web is a website which is developed for helping the street pets. It is like a bridge which connect person to ngo's who want to help street pets. They can do community post of their pets.
+                            We also provide some features to adopt a pets from shelters and donate to prevent animal cruelty.  
                         </p>
                     </div>
                     <div className="resume-clg-time resume-clg-time4">
-                        <div><a href="https://paw-haven.herokuapp.com/" target="_blank" rel="noopener noreferrer">View</a></div>
+                        <div><a href="https://animal-cruelty-web.netlify.app/" target="_blank" rel="noopener noreferrer">View</a></div>
                         
                     </div>
                 </div>
                 <div className="resume-detail-main resume-detail-main4">
                     <div className="resume-college-info">
-                        <h5>Aarvis </h5>
+                        <h5>Voice-Assistant </h5>
                         <p className="tecUsed">
                             <span>Technology Used :- </span>
-                            Hbs, HTML, Css, JavaScript, Express Js, Node js 
+                            React js, Tailwind css, web speech API  
                         </p>
                         <p className="tecUsed">
                             <span>Description :- </span>
-                            The name Aarvis inspired by Jarvis(Iron Man). Like Jarvis, It listen and give response according to your question.
+                            The name Voice Assistant  inspired by Jarvis(IRIS). Like Jarvis, It listen and give response according to your question.
                         </p>
+                        <p>
+                            Convert Voice commands into text. 
+                        </p>
+                        <p>Reads out response using a natural Voice</p>
+                        <p>Handle commands instantly</p>
                     </div>
                     <div className="resume-clg-time resume-clg-time4">
-                        <div><a href="https://aarvis.herokuapp.com/" target="_blank" rel="noopener noreferrer">View</a></div>
+                        <div><a href="https://voice-assistant-vert.vercel.app/" target="_blank" rel="noopener noreferrer">View</a></div>
                         
                     </div>
                 </div>
                 <div className="resume-detail-main resume-detail-main4">
                     <div className="resume-college-info">
-                        <h5>Talk-Favourite </h5>
+                        <h5>Sidcup-Family-Golf </h5>
                         <p className="tecUsed">
                             <span>Technology Used :- </span>
-                            React js, Express js, Node js, MongoDB, socket 
+                            HTML, Css, JavaScript Locomotive Scrol and GSAP (GreenSock Animation) 
                         </p>
                         <p className="tecUsed">
                             <span>Description :- </span>
-                            This is a chat applicatin, In this application you can chat with your favourite person and can get real-time instant notification.
+                            Sidcup Family Golf is a website which is developed for a golf club. It is a simple website with some animations.
                         </p>
+                        <p>Demonstrative proficiency Frontend developmen and creating seamless uses interfaces, leading an to 80% improvement in user satisfaction through optimized design and interactive elements.</p>
                     </div>
                     <div className="resume-clg-time resume-clg-time4">
-                        <div><a href="https://talk-favourite.herokuapp.com/" target="_blank" rel="noopener noreferrer">View</a></div>
+                        <div><a href="https://sidcup-family-golf-rosy.vercel.app/" target="_blank" rel="noopener noreferrer">View</a></div>
                         
                     </div>
                 </div>
-                <div className="resume-detail-main resume-detail-main4">
+                {/* <div className="resume-detail-main resume-detail-main4">
                     <div className="resume-college-info">
                         <h5>Real-time Editor </h5>
                         <p className="tecUsed">
@@ -120,7 +127,7 @@ const Projects = () => {
                     <div className="resume-clg-time resume-clg-time4">
                         <div><a target="_blank" href="https://aman97703.github.io/snakegame" rel="noopener noreferrer">View</a></div>
                     </div>
-                </div>
+                </div> */}
                
             </div>
         </>

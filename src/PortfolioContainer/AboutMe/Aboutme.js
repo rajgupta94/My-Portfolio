@@ -1,7 +1,6 @@
 import React from 'react'
 import LineBar from '../Components/LineBar'
 import './About.css'
-
 const Aboutme = () => {
     return (
         <>
@@ -23,7 +22,7 @@ const Aboutme = () => {
                         <div className="about-me-highlights">
                             <p>Here are few Highlights:</p>
                             <ul>
-                                {/* <li>Full Stack Web Developer</li> */}
+                                
                                 <li>Interactive Front-end as per the design</li>
                                 <li>React Developer</li>
                                 <li>Connect Api's</li>
@@ -32,7 +31,7 @@ const Aboutme = () => {
                         </div>
                         <div className="profile-options">
                             <button className='btn primary-btn'>Hire Me</button>
-                            <a href="resume.pdf" download={"Aman Gupta's Resume.pdf"}>
+                            <a href="" download={""}>
                                 <button className='btn highlighted-btn'>Get Resume</button>
                             </a>
                         </div>

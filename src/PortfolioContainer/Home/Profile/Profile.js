@@ -1,6 +1,5 @@
 import React from 'react';
 import './profile.css';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -32,7 +31,7 @@ const Profile = () => {
                                         steps={[
                                             "Raj Gupta Dev 🔴", 1200,
                                             "Frontend Developer 😎", 1200,
-                                            "Mern Stack Dev 💻", 1200,
+                                            // "Mern Stack Dev 💻", 1200,
                                             "React Js Developer 😍", 1200,
                                         ]}
                                     />
@@ -44,7 +43,7 @@ const Profile = () => {
                         </div>
                         <div className="profile-options">
                             <button className='btn primary-btn'>Hire Me</button>
-                            <a href="resume.pdf" download={"Aman Gupta's Resume.pdf"}>
+                            <a href="resme.pdf" download={"Raj Gupta Resume"}>
                                 <button className='btn highlighted-btn'>Get Resume</button>
                             </a>
                         </div>
