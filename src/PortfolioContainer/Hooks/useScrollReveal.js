@@ -10,17 +10,18 @@ const useScrollReveal = (options = { threshold: 0.2 }) => {
     const elementRef = useRef(null);
 
     useEffect(() => {
+        const currentElement = elementRef.current;
         const observer = new IntersectionObserver(([entry]) => {
             setIsRevealed(entry.isIntersecting);
         }, options);
 
-        if (elementRef.current) {
-            observer.observe(elementRef.current);
+        if (currentElement) {
+            observer.observe(currentElement);
         }
 
         return () => {
-            if (elementRef.current) {
-                observer.unobserve(elementRef.current);
+            if (currentElement) {
+                observer.unobserve(currentElement);
             }
         };
     }, [options]);

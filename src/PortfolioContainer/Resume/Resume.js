@@ -4,7 +4,6 @@ import LineBar from '../Components/LineBar'
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import SchoolIcon from '@mui/icons-material/School';
 import HistoryIcon from '@mui/icons-material/History';

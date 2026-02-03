@@ -29,7 +29,7 @@ const Profile = () => {
                                     loop={Infinity}
                                     steps={[
                                         "Software Developer ⌨️", 1300,
-                                        "Frontend Specialist �", 1300,
+                                        "Frontend Specialist 🚀", 1300,
                                         "React & Next.js Dev ⚛️", 1300,
                                     ]}
                                 />

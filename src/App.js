@@ -10,33 +10,37 @@ import ScreenLoader from './PortfolioContainer/Components/ScreenLoader/ScreenLoa
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [showScrollBtn, setShowScrollBtn] = useState(false);
+  const [mountRest, setMountRest] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2200); // Aesthetic delay
+      // Stagger the mounting of heavy sections
+      setTimeout(() => setMountRest(true), 150);
+    }, 2200);
     return () => clearTimeout(timer);
   }, []);
 
-  window.onscroll = function () { scrollFunction() };
-  const scrollFunction = () => {
-    if (document.documentElement.scrollTop < 40) {
-      const scrollBtn = document.getElementById('scroll');
-      if (scrollBtn) scrollBtn.style.display = "none";
-    }
-    else {
-      const scrollBtn = document.getElementById('scroll');
-      if (scrollBtn) scrollBtn.style.display = "block";
-    }
-  }
-
   useEffect(() => {
-    scrollFunction();
-  }, [])
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setShowScrollBtn(true);
+      } else {
+        setShowScrollBtn(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initial check
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const setScrollHeight = () => {
-    document.documentElement.scrollTop = 0
-  }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <ThemeProvider>
@@ -46,11 +50,19 @@ const App = () => {
         <div className="app-container fade-in-app">
           <Home />
           <Aboutme />
-          <Resume />
-          <Contactme />
-          <div id='scroll' className="scroll-up">
-            <button onClick={setScrollHeight}><ArrowUpwardIcon /> </button>
-          </div>
+          {mountRest && (
+            <>
+              <Resume />
+              <Contactme />
+            </>
+          )}
+          {showScrollBtn && (
+            <div id='scroll' className="scroll-up">
+              <button onClick={setScrollHeight} aria-label="Scroll to top">
+                <ArrowUpwardIcon />
+              </button>
+            </div>
+          )}
         </div>
       )}
     </ThemeProvider>
