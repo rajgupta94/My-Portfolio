@@ -1,130 +1,251 @@
 .resume-main {
     width: 100%;
     display: flex;
+    flex-direction: row;
     margin-top: 4rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 20px 20px 0px rgba(212, 175, 55, 0.03);
+    /* Consistent with About */
+    padding: 0;
+    transition: all 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    overflow: hidden;
+    position: relative;
+
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    /* Hidden Shutter */
+    transform: translateX(-50px);
 }
 
-.resume-main .css-1n3h4wo {
-    height: fit-content;
+.about-container.revealed .resume-main {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translateX(0);
 }
 
-.resume-main .MuiTabs-scrollButtons {
-    display: none;
+/* Sidebar Icons Area (Navy Strip) */
+.resume-icons {
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    width: 70px;
+    z-index: 2;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+
+    transform: translateX(-100%);
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
-.resume-main .css-aym9vq-MuiButtonBase-root-MuiTab-root {
-    display: inline-block;
-}
-
-.resume-main .css-aym9vq-MuiButtonBase-root-MuiTab-root svg {
-    margin-right: 10px;
+.about-container.revealed .resume-icons {
+    transform: translateX(0);
 }
 
 .resume-main-icons {
-    margin-top: 30px;
-    margin-bottom: 40px;
-    padding: 0 5px;
+    margin: 15px 0;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.resume-icons {
-    background: #24263b;
+.about-container.revealed .resume-main-icons {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered Icons */
+.about-container.revealed .resume-main-icons:nth-child(1) {
+    transition-delay: 1.2s;
+}
+
+.about-container.revealed .resume-main-icons:nth-child(2) {
+    transition-delay: 1.3s;
+}
+
+.about-container.revealed .resume-main-icons:nth-child(3) {
+    transition-delay: 1.4s;
+}
+
+.about-container.revealed .resume-main-icons:nth-child(4) {
+    transition-delay: 1.5s;
+}
+
+.about-container.revealed .resume-main-icons:nth-child(5) {
+    transition-delay: 1.6s;
 }
 
 .resume-main-icons button {
     background: transparent;
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.4);
     outline: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
 }
+
+.resume-main-icons button:hover {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+/* MUI Tabs Override */
+.resume-main .MuiTabs-root {
+    border-right: 1px solid var(--border-color) !important;
+    width: 280px;
+    background: var(--bg-primary);
+
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+}
+
+.about-container.revealed .MuiTabs-root {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.resume-main .MuiTabs-scroller {
+    overflow: visible !important;
+}
+
 .resume-main .resume-tabs {
-    padding: 0;
-    text-align: start;
+    text-align: left;
     display: flex;
-    color: black;
-    align-items: flex-start;
-    margin-top: 23px;
-    margin-bottom: -5px;
-    outline: none;
-    padding-left: 26px;
-    font-weight: 600;
-    padding-right: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-primary) !important;
+    font-family: var(--font-serif) !important;
+    font-weight: 600 !important;
+    font-style: italic;
+    padding: 20px 25px !important;
+    text-transform: capitalize !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease !important;
+    position: relative;
+    z-index: 1;
+
+    opacity: 0;
+    transform: translateX(-10px);
 }
+
+.about-container.revealed .resume-tabs {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Staggered Tabs */
+.about-container.revealed .resume-tabs:nth-child(1) {
+    transition-delay: 1.4s;
+}
+
+.about-container.revealed .resume-tabs:nth-child(2) {
+    transition-delay: 1.5s;
+}
+
+.about-container.revealed .resume-tabs:nth-child(3) {
+    transition-delay: 1.6s;
+}
+
+.about-container.revealed .resume-tabs:nth-child(4) {
+    transition-delay: 1.7s;
+}
+
+.about-container.revealed .resume-tabs:nth-child(5) {
+    transition-delay: 1.8s;
+}
+
+.resume-main .resume-tabs:hover {
+    background: rgba(212, 175, 55, 0.05);
+    padding-left: 30px !important;
+}
+
 .resume-main .resume-tabs.Mui-selected {
-    color: white;
-    background: #24263b;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    transition: 0.5s ease-in-out;
-}
-.resume-main .MuiTabs-indicator{
-    display: none;
+    color: var(--primary-color) !important;
+    background: var(--bg-secondary);
+    padding-left: 35px !important;
+    box-shadow: -5px 0 0 var(--primary-color) inset;
 }
 
-.resume-main .MuiTabs-vertical {
-    border-right: 2px solid;
-    border-color: rgba(0, 0, 0, 0.3);
-    padding-right: 40px;
-    box-shadow: 2px 0px 0px 0px #dfdbdb;
-}
-.resume-main .MuiSvgIcon-fontSizeSmall{
-    display: none;
-}
-.MuiTabs-scrollButtonsHideMobile {
-    display: none;
+.resume-main .MuiTabs-indicator {
+    display: none !important;
 }
 
-@media screen and (max-width:990px) {
-    .about-head{ 
-        margin-top: 3rem;
-    }
-    .css-1l0r181 {
-        display: flex;
+/* Content Area */
+.resume-main .resume-tabpanel {
+    flex: 1;
+    padding: 40px 50px !important;
+    color: var(--text-primary);
+    min-height: 500px;
+    background-image: linear-gradient(var(--bg-secondary) 1px, transparent 1px);
+    background-size: 100% 30px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
+}
+
+.about-container.revealed .resume-tabpanel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typography Overrides */
+.resume-main .MuiTypography-root {
+    font-family: var(--font-sans) !important;
+}
+
+/* Headings in Resume */
+.resume-heading h5 {
+    color: var(--primary-color) !important;
+    font-family: var(--font-sans) !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 990px) {
+    .resume-main {
         flex-direction: column;
-    }
-    .resume-main .css-35zqo5-MuiTabs-root {
-        width: 65%;
-    }
-    .resume-icons{
-        height: fit-content;
-    }
-    .resume-main .resume-tabpanel {
-        width: 100% !important;
-        margin-top: 45px;
-        margin-left: -4em;
-    }
-    .about-container{
-        height: max-content;
-    }
-    .resume-main .css-35zqo5-MuiTabs-root{
-        border: none;
-        box-shadow: none;
+        height: auto;
+        clip-path: none !important;
+        /* Simplified for mobile performance */
+        transform: none !important;
+        opacity: 1;
     }
 
-}
-
-@media screen and (max-width:690px) {
-    .about-root{
-        width: 90%;
-    }
-    .resume-main .resume-tabpanel {
-        width: 110% !important;
-        margin-top: 45px;
-        
-    }
-    .resume-main .css-35zqo5-MuiTabs-root {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:420px) {
-    .resume-college-info2 p{
+    .resume-icons {
         display: none;
     }
-    .resume-clg-time div{
-        font-size: 11px !important;
-        padding: 7px !important;
+
+    .resume-main .MuiTabs-root {
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: 2px solid var(--primary-color);
+        transform: none !important;
+        opacity: 1;
     }
-    .resume-college-info h5{
-        font-size: 18px !important;
+
+    .resume-main .resume-tabs {
+        justify-content: center;
+        border-bottom: none;
+        transform: none !important;
+        opacity: 1;
+    }
+
+    .resume-main .resume-tabs.Mui-selected {
+        box-shadow: none;
+        background: var(--primary-color);
+        color: var(--bg-primary) !important;
+        padding-left: 25px !important;
+    }
+
+    .resume-main .resume-tabpanel {
+        padding: 20px !important;
+        opacity: 1;
+        transform: none !important;
     }
 }

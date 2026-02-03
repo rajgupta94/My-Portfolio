@@ -1,22 +1,170 @@
+.resume-details-container {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+/* Vertical Timeline Line (Matched with Education) */
+.resume-details-container::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+}
+
 .resume-detail-main4 {
+    margin-bottom: 50px;
+    padding-bottom: 0;
+    border-bottom: none;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.resume-detail-main4:hover {
+    transform: translateX(5px);
+}
+
+.resume-detail-main4:last-child {
     margin-bottom: 0;
 }
-.resume-college-info4 h5 {
-    font-size: 17px;
-    margin-bottom: 0;
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    position: relative;
 }
-p.tecUsed {
-    margin: 0;
-    margin-left: 1.5em;
-    font-size: 14px;
+
+/* Timeline Bullet on the line */
+.project-header::before {
+    content: "✦";
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));
+    background: var(--bg-secondary);
+    padding: 2px;
+    z-index: 2;
+    animation: goldPulse 2s infinite ease-in-out;
 }
-p.tecUsed span{
+
+.project-header span:first-child {
+    font-size: 1.4rem;
+    font-family: var(--font-serif);
+    color: var(--text-primary);
     font-weight: 700;
 }
-.resume-clg-time4 div{
-    width: 70px;
+
+/* Links Styling - Solid Gold Pills */
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    /* Premium Solid Gold Badge */
+    background: var(--primary-color);
+    padding: 6px 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
 }
-.resume-clg-time.resume-clg-time4 a {
-    color: white;
+
+.project-links a {
+    color: var(--bg-primary);
+    /* High contrast dark text on gold */
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    transform: translateY(-1px);
+    opacity: 0.8;
+}
+
+.project-links span {
+    color: var(--bg-primary);
+    opacity: 0.3;
+}
+
+.resume-detail-main4:hover .project-links {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.project-sub-heading {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resume-work-description p {
+    margin-left: 0;
+}
+
+.resume-work-description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume-work-description ul li {
+    font-family: var(--font-sans);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.resume-work-description ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.resume-work-description ul li strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Responsive */
+@media screen and (max-width: 991px) {
+    .project-header {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-header span:first-child {
+        font-size: 1.2rem;
+    }
+
+    .project-links {
+        padding: 4px 12px;
+        font-size: 0.7rem;
+    }
 }

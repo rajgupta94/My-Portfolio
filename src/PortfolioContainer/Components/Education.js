@@ -11,7 +11,7 @@ const Education = () => {
                         <p>Shri siddhi vinayak group of institution</p>
                     </div>
                     <div className="resume-clg-time">
-                        <div>2022-2027</div>
+                        <div>2022-2026</div>
                     </div>
                 </div>
                 <div className="resume-detail-main">

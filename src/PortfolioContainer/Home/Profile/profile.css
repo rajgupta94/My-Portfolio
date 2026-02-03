@@ -3,138 +3,255 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    height: max-content;
-    min-height: fit-content;
-    
+    min-height: 100vh;
+    padding-top: 100px;
+    /* Offset for fixed navbar */
+    background-color: transparent;
+    overflow: hidden;
+    /* Prevent scrollbars from animations */
 }
-.profile-parent{
+
+.profile-parent {
     display: flex;
     align-items: center;
-    color: aliceblue;
+    color: var(--text-primary);
+    justify-content: space-between;
+    width: 85%;
+    max-width: 1400px;
 }
-.profile-details-name{
+
+.profile-details {
+    flex: 1;
+    text-align: left;
+    z-index: 2;
+    position: relative;
+}
+
+/* Classic Spotlight Glow */
+.profile-details::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- ICONS --- */
+.colz .colz-icons {
+    padding-bottom: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.colz .colz-icons a {
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.colz .colz-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.colz .colz-icons svg {
+    font-size: 26px;
+}
+
+/* --- TYPOGRAPHY (CLASSIC) --- */
+.profile-details-name {
     font-size: 24px;
-    font-family: "Poppins SemiBold";
+    font-family: var(--font-sans);
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+
+    animation: revealText 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
-.profile-details-role{
+
+.profile-details-role {
     display: flex;
     flex-direction: column;
-    margin: 14px 0 24px 0;
+    margin: 0 0 30px 0;
 }
-.profile-details-role h1{
-    font-size: 40px;
-    font-family: cursive;
+
+.profile-details-role h1 {
+    font-size: 4rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+    color: var(--text-primary);
+    min-height: 4.5rem;
+    /* Prevents jumping during animation */
+    display: block;
+
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.3s forwards;
 }
-.primary-text{
-    color: var(--white);
+
+.profile-details-role h1 .highlighted-text {
+    color: var(--primary-color);
+    font-style: italic;
+    position: relative;
+    display: inline-block;
 }
-.highlighted-text{
-    color: var(--dark-orange);
+
+/* Underline decoration for name */
+.profile-details-role h1 .highlighted-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 5px;
+    left: 0;
+    background: rgba(212, 175, 55, 0.2);
+    z-index: -1;
+    transform: skewX(-15deg);
 }
-.profile-role-tagline{
-    font-size: 19px;
-    margin: 5px 0 0 0;
-    font-family: "Poppins Light"
+
+.profile-role-tagline {
+    font-size: 18px;
+    margin: 20px 0 0 0;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 80%;
+
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.6s forwards;
 }
-.profile-options .highlighted-btn{
-    margin: 0 0 0 20px;
+
+/* --- BUTTONS --- */
+.profile-options {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.9s forwards;
 }
-.profile-options .highlighted-btn:hover{
-    background: cornsilk;
-    color: #111;
-}
-.profile-picture{
+
+/* --- PROFILE PICTURE (GOLDEN FRAME) --- */
+.profile-picture {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 1px 0 0 var(--white);
-    border-radius: 50%;
-    height: 380px;
-    width: 380px;
-    margin: 0 0 0 100px;
+    height: 420px;
+    width: 420px;
+    position: relative;
+    margin-left: 50px;
+
+    opacity: 0;
+    animation: zoomIn 1.5s ease 0.2s forwards;
 }
-.profile-picture-background{
-    height: 92%;
-    width: 92%;
+
+/* Square frame removed per user request */
+/* .profile-picture::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-color);
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+.profile-picture:hover::before {
+    top: -10px;
+    right: -10px;
+    border-color: var(--text-primary);
+} */
+
+.profile-picture-background {
+    height: 100%;
+    width: 100%;
     background-image: url('../../../assets/images/rajImg.jpg');
     background-size: cover;
+    background-position: center;
+    z-index: 1;
+    box-shadow: var(--navy-shadow);
+    filter: grayscale(20%) sepia(10%);
+    /* Classic film look */
+    transition: all 0.5s ease;
     border-radius: 50%;
-    background-repeat: no-repeat;
-}
-.profile-picture-background:hover{
-    transform: scale(1.07);
-    transition: 1s ease-in-out;
-}
-.colz .colz-icons svg{
-    color: white;
-    padding: 8px;
-    padding-left: 0;
-    font-size: 40px;
-    
-}
-.colz .colz-icons svg:hover{
-    transform: scale(1.5);
-    transition: 0.2s ease-in-out;
-
-}
-@media screen and (max-width:1110px){
-    .profile-picture{
-        margin: 0 0 0 80px;
-    }
-    .profile-details-name{
-        font-size: 20px;
-
-    }
-    .profile-details-role .primary-text{
-        font-size: 12px;
-    }
-    .profile-options .btn{
-        width: 120px;
-        padding: 11px 0;
-        z-index: 700;
-    }
+    /* Make image circular */
+    border: 4px solid var(--bg-secondary);
+    /* Separator from frame */
 }
 
-@media screen and (max-width: 910px){
-    .profile-picture{
-        height: 320px;
-        width: 320px;
-        margin: 0 0 0 4px;
-    }
+.profile-picture:hover .profile-picture-background {
+    filter: grayscale(0%);
+    transform: translate(-10px, -10px);
 }
-@media screen and (max-width: 810px){
-    .profile-picture{
-        margin: 0 !important;
-    }
-    .profile-parent{
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 1110px) {
+    .profile-parent {
         flex-direction: column-reverse;
-        margin: 40px 0 0 0;
-    }
-    .profile-options{
-        display: flex;
-        justify-content: space-around;
-        
-    }
-    .profile-details{
-        margin: 25px 0 0;
-    }
-    .profile-options .highlighted-btn{
-        margin: 0 !important;
-    }
-    .profile-options, .profile-details-role{
         text-align: center;
+        justify-content: center;
+        /* Space now handled by .profile-container padding */
+        height: auto;
     }
+
+    .profile-details {
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .profile-details-role h1 {
-        font-size: 2.7rem;
+        font-size: 3rem;
+        min-height: 3.5rem;
+    }
+
+    .profile-role-tagline {
+        max-width: 100%;
+    }
+
+    .profile-options {
+        justify-content: center;
+    }
+
+    .profile-picture {
+        width: 320px;
+        height: 320px;
+        margin: 0;
+    }
+
+    .profile-picture::before {
+        display: none;
+        /* Remove frame on mobile to save space/complexity */
     }
 }
-@media screen and (max-width: 390px){
-    .profile-picture{
-        height: 270px;
-        width: 270px;
-        margin: -90px 0 0 0px;
+
+@media screen and (max-width: 450px) {
+    .profile-picture {
+        width: 250px;
+        height: 250px;
     }
-    .profile-details{
-        width: 90%;
+
+    .profile-details-role h1 {
+        font-size: 2.5rem;
+        min-height: 3rem;
+    }
+
+    .colz .colz-icons {
+        justify-content: center;
     }
 }

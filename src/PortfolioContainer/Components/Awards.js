@@ -1,37 +1,34 @@
 import React from 'react'
+import './awards.css'
 
 const Awards = () => {
     return (
         <>
             <div className="resume-details-container">
-                <div className="resume-detail-main">
+                <div className="resume-detail-main resume-award-item">
                     <div className="resume-college-info">
                         <h5>Greycampus :- A foundation Program in full stack </h5>
-                    </div>
-                    <div className="resume-clg-time resume-clg-time4">
-                        <div><a href="https://gstudy.greycampus.com/elearning/certificate/61310233788629" target="_blank" rel="noopener noreferrer">View</a></div>
+                        <p className="award-description">Completed a comprehensive program covering the fundamentals of full-stack web development.</p>
                     </div>
                 </div>
-                <div className="resume-detail-main">
+                <div className="resume-detail-main resume-award-item">
                     <div className="resume-college-info">
                         <h5>Freecodecamp :- Responsive Web Design </h5>
-                    </div>
-                    <div className="resume-clg-time resume-clg-time4">
-                        <div><a href="https://www.freecodecamp.org/certification/aman97703/responsive-web-design" target="_blank" rel="noopener noreferrer">View</a></div>
-                        
+                        <p className="award-description">Certified in building responsive websites using HTML, CSS, Flexbox, and CSS Grid.</p>
                     </div>
                 </div>
-                <div className="resume-detail-main">
+                <div className="resume-detail-main resume-award-item">
                     <div className="resume-college-info">
                         <h5>Coursera :- Programming for Everybody </h5>
-                    </div>
-                    <div className="resume-clg-time resume-clg-time4">
-                        <div><a href="https://www.coursera.org/account/accomplishments/verify/8SG5BS4V496N" target="_blank" rel="noopener noreferrer">View</a></div>
+                        <p className="award-description">Introductory course on Python programming and fundamental computer science concepts.</p>
                     </div>
                 </div>
-                
-                
-
+                <div className="resume-detail-main resume-award-item">
+                    <div className="resume-college-info">
+                        <h5>HackerRank :- React Basic Certificate </h5>
+                        <p className="award-description">Validated proficiency in React component lifecycle, state management, and props.</p>
+                    </div>
+                </div>
             </div>
         </>
     )

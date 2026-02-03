@@ -1,24 +1,38 @@
-.footer-container{
-    height: 17.8%;
+.footer-container {
+    height: 150px;
+    /* Reduced fixed height */
     width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    margin-top: -100px;
+    /* Pull up to overlap with profile slightly if needed */
+    z-index: -1;
 }
-.footer-parent{
+
+.footer-parent {
     width: 100%;
     height: 100%;
     max-width: 1920px;
-}
-.foooter-parent img{
-    max-width: 100%;
-    height: 130px;
-
+    display: flex;
+    align-items: flex-end;
 }
 
-@media only screen and (max-width) {
-    .footer-parent{
-        display: flex;
-        align-items: flex-end;
+.footer-parent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure wave covers area */
+    opacity: 0.8;
+    /* Slight transparency for softness */
+    filter: hue-rotate(15deg);
+    /* Slight tint shift to match new palette */
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        height: 100px;
+        margin-top: -50px;
     }
 }

@@ -4,18 +4,24 @@
     justify-content: center;
     align-items: center;
 }
+
 .line-bar-cont {
     width: 320px;
-    position: relative;   
+    position: relative;
 }
+
 .line-bar-cont div:first-child {
-    background: black;
-    height: 2px;
+    background: var(--text-secondary);
+    height: 3px;
+    /* Slightly thicker for 'solid' feel */
     border-radius: 10px;
+    opacity: 0.2;
 }
+
 .line-bar-cont div:last-child {
-    background: #ff5823;
-    height: 10px;
+    background: var(--primary-color);
+    height: 5px;
+    /* Proportional to first-child */
     border-radius: 10px;
     width: 90px;
     top: -4px;

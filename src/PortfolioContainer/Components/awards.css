@@ -1,0 +1,30 @@
+.resume-award-item {
+    border-left: 2px solid var(--primary-color);
+    padding-left: 20px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.resume-award-item:hover {
+    background: rgba(212, 175, 55, 0.05);
+    /* Subtle gold tint on hover */
+    padding-left: 25px;
+    /* Slight shift */
+}
+
+.resume-award-item .resume-college-info h5 {
+    font-size: 1.1rem;
+    font-family: var(--font-serif);
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.award-description {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 0;
+}

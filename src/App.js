@@ -1,45 +1,59 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import Aboutme from './PortfolioContainer/AboutMe/Aboutme'
 import Contactme from './PortfolioContainer/ContactMe/Contactme'
 import Home from './PortfolioContainer/Home/Home'
 import Resume from './PortfolioContainer/Resume/Resume'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { ThemeProvider } from './Context/ThemeContext';
+import ScreenLoader from './PortfolioContainer/Components/ScreenLoader/ScreenLoader';
 
 const App = () => {
-  window.onscroll = function(){scrollFunction()};
-  const scrollFunction = ()=>{
-    if(document.documentElement.scrollTop < 40)
-    {
-      document.getElementById('scroll').style.display = "none";
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2200); // Aesthetic delay
+    return () => clearTimeout(timer);
+  }, []);
+
+  window.onscroll = function () { scrollFunction() };
+  const scrollFunction = () => {
+    if (document.documentElement.scrollTop < 40) {
+      const scrollBtn = document.getElementById('scroll');
+      if (scrollBtn) scrollBtn.style.display = "none";
     }
-    else{
-      document.getElementById('scroll').style.display = "block";
+    else {
+      const scrollBtn = document.getElementById('scroll');
+      if (scrollBtn) scrollBtn.style.display = "block";
     }
   }
-  useEffect(()=>{
-    if(document.documentElement.scrollTop < 40)
-    {
-      document.getElementById('scroll').style.display = "none";
-    }
-    else{
-      document.getElementById('scroll').style.display = "block";
-    }
-  },[])
 
-  const setScrollHeight = ()=>{
+  useEffect(() => {
+    scrollFunction();
+  }, [])
+
+  const setScrollHeight = () => {
     document.documentElement.scrollTop = 0
   }
+
   return (
-    <>
-      <Home/>
-      <Aboutme/>
-      <Resume/>
-      <Contactme/>
-      <div id='scroll' className="scroll-up">
-        <button onClick={setScrollHeight}><ArrowUpwardIcon/> </button>
-      </div>
-    </>
+    <ThemeProvider>
+      {loading ? (
+        <ScreenLoader />
+      ) : (
+        <div className="app-container fade-in-app">
+          <Home />
+          <Aboutme />
+          <Resume />
+          <Contactme />
+          <div id='scroll' className="scroll-up">
+            <button onClick={setScrollHeight}><ArrowUpwardIcon /> </button>
+          </div>
+        </div>
+      )}
+    </ThemeProvider>
   )
 }
 

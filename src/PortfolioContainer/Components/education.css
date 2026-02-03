@@ -1,58 +1,105 @@
+.resume-details-container {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+/* Vertical Timeline Line */
+.resume-details-container::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+}
+
 .resume-detail-main {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
-    margin-bottom: 40px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+    transition: all 0.4s ease;
 }
 
-.resume-main .resume-tabpanel {
-    width: 70%;
-}
-
-.resume-details-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.resume-detail-main:last-child {
-    margin-bottom: 0px;
+.resume-detail-main:hover {
+    transform: translateX(5px);
 }
 
 .resume-college-info h5 {
-    color: #ff5823;
-    font-weight: 600;
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
     text-transform: capitalize;
+    margin-bottom: 8px;
+    position: relative;
 }
 
+/* Timeline Bullet on the line */
 .resume-college-info h5::before {
-    content: "\205C";
-    color: #ff5823;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    font-size: 24px;
+    content: "✦";
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));
+    background: var(--bg-secondary);
+    padding: 2px;
+    z-index: 2;
+    animation: goldPulse 2s infinite ease-in-out;
 }
 
 .resume-college-info p {
     font-weight: 500;
-    font-size: 15px;
-    margin-left: 1.5em;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    /* Highlighted Institution */
+    font-family: var(--font-sans);
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .resume-clg-time div {
-    padding: 10px;
-    background: #ff5823;
-    border-radius: 21px;
-    font-size: 13px;
-    color: white;
-    width: 104px;
-    font-weight: 600;
+    padding: 6px 18px;
+    background: var(--primary-color);
+    border-radius: 50px;
+    /* Pill shape for 'Premium License' look */
+    font-size: 0.85rem;
+    color: var(--bg-primary);
+    /* High contrast */
+    font-weight: 700;
+    font-family: var(--font-sans);
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.resume-detail-main:hover .resume-clg-time div {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .resume-detail-main {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .resume-college-info h5 {
+        font-size: 1.2rem;
+    }
+
+    .resume-clg-time {
+        align-self: flex-start;
+    }
 }

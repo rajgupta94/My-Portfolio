@@ -7,15 +7,18 @@ import './contact.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SendIcon from '@mui/icons-material/Send';
+import useScrollReveal from '../Hooks/useScrollReveal'
 
 const Contactme = () => {
+    const [contactRef, isContactRevealed] = useScrollReveal();
+
     return (
         <>
-            <div id='contact' className="about-container contact-container">
+            <div id='contact' className={`about-container contact-container ${isContactRevealed ? 'revealed' : ''}`} ref={contactRef}>
                 <div className="about-root">
                     <div className="about-head">
                         <h1>Contact Me</h1>
-                        <p></p>
+                        <p>Let's Connect</p>
                     </div>
                     <div className="lineBar-main">
                         <LineBar />
@@ -26,19 +29,19 @@ const Contactme = () => {
                         </div>
                         <div className="contact-lr">
                             <div className="contact-left">
-                                <div>
+                                <div className="contact-item">
                                     <span><CallIcon /></span>
-                                    <a href="tel:+91-8218525893">9410812659</a>
+                                    <a href="tel:+91-9410812659">9410812659</a>
                                 </div>
-                                <div>
+                                <div className="contact-item">
                                     <span><AlternateEmailIcon /></span>
-                                    <a href="mailto:rajgupta84639@gmail.com">rajgupta8469@gmail.com</a>
+                                    <a href="mailto:rajgupta8469@gmail.com">rajgupta8469@gmail.com</a>
                                 </div>
-                                <div>
+                                <div className="contact-item">
                                     <span><GitHubIcon /></span>
-                                    <a href="https://github.com/">raj8859</a>
+                                    <a href="https://github.com/raj8859">raj8859</a>
                                 </div>
-                                <div>
+                                <div className="contact-item">
                                     <span><LinkedInIcon /></span>
                                     <a href="https://www.linkedin.com/in/raj-gupta-a41118264">raj8859</a>
                                 </div>
@@ -58,7 +61,7 @@ const Contactme = () => {
                                         <textarea name="message" id="message" placeholder='Your Message...'></textarea>
                                     </div>
                                     <div className="form-inputs-submit">
-                                        <button type="submit" className='btn highlighted-btn'>Send <SendIcon/> </button>
+                                        <button type="submit" className='btn highlighted-btn'>Send <SendIcon /> </button>
                                     </div>
                                 </form>
                             </div>

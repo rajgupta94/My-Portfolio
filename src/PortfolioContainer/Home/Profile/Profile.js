@@ -20,30 +20,29 @@ const Profile = () => {
                         </div>
                         <div className="profile-details-name">
                             <span className="primary-text">
-                                Hello, I'M <span className="highlighted-text">Raj Gupta {localStorage.getItem('count')} </span>
+                                Hello, I'M <span className="highlighted-text">Raj Gupta {localStorage.getItem('count') || ""}</span>
                             </span>
                         </div>
                         <div className="profile-details-role">
-                            <span className="primary-text">
-                                <h1>
-                                    <Typical
-                                        loop={Infinity}
-                                        steps={[
-                                            "Raj Gupta Dev 🔴", 1200,
-                                            "Frontend Developer 😎", 1200,
-                                            // "Mern Stack Dev 💻", 1200,
-                                            "React Js Developer 😍", 1200,
-                                        ]}
-                                    />
-                                </h1>
-                                <span className="profile-role-tagline">
-                                    Knack of building applications with front end operations.
-                                </span>
+                            <h1>
+                                <Typical
+                                    loop={Infinity}
+                                    steps={[
+                                        "Software Developer ⌨️", 1300,
+                                        "Frontend Specialist �", 1300,
+                                        "React & Next.js Dev ⚛️", 1300,
+                                    ]}
+                                />
+                            </h1>
+                            <span className="profile-role-tagline">
+                                Knack of building applications with front end operations.
                             </span>
                         </div>
                         <div className="profile-options">
-                            <button className='btn primary-btn'>Hire Me</button>
-                            <a href="resme.pdf" download={"Raj Gupta Resume"}>
+                            <a href="#contact">
+                                <button className='btn primary-btn'>Hire Me</button>
+                            </a>
+                            <a href="resume/Raj_SWE_Resume.pdf" download="Raj_Gupta_Resume.pdf">
                                 <button className='btn highlighted-btn'>Get Resume</button>
                             </a>
                         </div>

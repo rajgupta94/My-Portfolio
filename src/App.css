@@ -1,34 +1,205 @@
-:root{
-  --light-blue : #04C3FF;
-  --light-blue-shadow:  rgb(69 211 255 / 27%);
-  --sea-green: #0ABEAD;
-  --sea-green-dark: #0CBFAE;
-  --sea-green-extra-dark: #09BEAD;
-  --sea-green-shadow: rgba(11, 190, 173,0.4);
-  --header-hamburger-background : rgba(11, 190, 173,0.8);
-  --orange: #F57F17;
-  --dark-orange: #FF5823;
-  --orange-shadow: rgba(245, 127, 23,0.2);
-  --white: #ffffff;
-  --black: #333333;
-  --disabled-btn: #09bead7a;
-  --error-message:  #e44f4fd1;
-  --toast-error: #e44f4ffa;
-  --toast-shadow:  #9c9c9ce3;
-  --toast-success: #0CBFAE;
-  --loader-color: #0CBFAE
+:root {
+  /* --- CLASSIC PREMIUM PALETTE --- */
+
+  /* Primary & Accent (Gold/Bronze) */
+  --primary-color: #D4AF37;
+  /* Metallic Gold */
+  --primary-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  --accent-color: #C5A059;
+
+  /* Secondary (Deep Navy/Emerald) */
+  --secondary-color: #0A192F;
+  /* Royal Navy */
+  --secondary-gradient: linear-gradient(135deg, #0A192F, #112240);
+
+  /* Utils */
+  --white: #F9F9F9;
+  /* Marble White */
+  --black: #121212;
+  /* Charcoal */
+  --gold-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  --navy-shadow: 0 10px 40px -10px rgba(2, 12, 27, 0.7);
+
+  /* Theme Defaults (Light) */
+  --bg-primary: #F5F5DC;
+  /* Cream/Beige */
+  --bg-secondary: #FFFFFF;
+  --text-primary: #0A192F;
+  --text-secondary: #5F6C7B;
+  --border-color: rgba(212, 175, 55, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(212, 175, 55, 0.2);
+  --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+
+  /* Fonts */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Montserrat', sans-serif;
 }
-.scroll-up {
-  position: fixed;
-  right: 40px;
-  bottom: 35px;
+
+[data-theme="dark"] {
+  --bg-primary: #0B0F19;
+  /* Deeper Slate Black */
+  --bg-secondary: #151B28;
+  /* Professional Navy Slate */
+  --text-primary: #F8FAFC;
+  /* Crisp Off-White */
+  --text-secondary: #94A3B8;
+  /* Muted Steel Gray */
+  --border-color: rgba(212, 175, 55, 0.35);
+  --glass-bg: rgba(11, 15, 25, 0.85);
+  --glass-border: rgba(212, 175, 55, 0.15);
+  --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  --white: #0B0F19;
+  --black: #F8FAFC;
 }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  margin: 0;
+  transition: all 0.4s ease;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* --- RICH ANIMATIONS --- */
+
+/* Text Reveal Mask */
+@keyframes revealText {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Golden Shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Staggered Rise */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Zoom In Scale */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- BUTTONS (ELEGANT) --- */
+.btn {
+  border-radius: 2px;
+  /* Sharp edges for classic look */
+  padding: 14px 35px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 1px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
+
+.btn:hover {
+  color: #0A192F !important;
+  /* Force readable dark text on light hover backgrounds */
+  box-shadow: var(--gold-shadow);
+  transform: translateY(-3px);
+}
+
+[data-theme="dark"] .btn:hover {
+  color: #F8FAFC !important;
+  /* Light text for dark hover states if needed, but gold bg usually needs dark text */
+}
+
+/* Specific fix for Primary Button hover text */
+.primary-btn:hover {
+  color: var(--secondary-color) !important;
+}
+
+.primary-btn {
+  background: var(--primary-color);
+  color: var(--bg-primary);
+}
+
+.primary-btn::after {
+  background: var(--white);
+}
+
 .scroll-up button {
-  background: #ff5823;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--gold-shadow);
   border: none;
-  outline: none;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 4px 4px 6px 0px #bfb6b6;
+  color: #121212;
+}
+
+.scroll-up button:hover {
+  animation: shimmer 2s infinite linear;
 }

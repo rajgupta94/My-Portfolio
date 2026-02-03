@@ -16,6 +16,7 @@ import ProgrammingSkill from '../Components/ProgrammingSkill';
 import Projects from '../Components/Projects';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import Awards from '../Components/Awards';
+import useScrollReveal from '../Hooks/useScrollReveal'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -52,6 +53,7 @@ function a11yProps(index) {
 
 const Resume = () => {
     const [value, setValue] = React.useState(0);
+    const [resumeRef, isResumeRevealed] = useScrollReveal();
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -59,11 +61,11 @@ const Resume = () => {
 
     return (
         <>
-            <div id='resume' className="about-container">
+            <div id='resume' className={`about-container ${isResumeRevealed ? 'revealed' : ''}`} ref={resumeRef}>
                 <div className="about-root">
                     <div className="about-head">
                         <h1>Resume</h1>
-                        <p>My Formal Bio Details</p>
+                        <p>Formal Narrative</p>
                     </div>
                     <div className="lineBar-main">
                         <LineBar />
@@ -105,19 +107,19 @@ const Resume = () => {
                                 <Tab className='resume-tabs' label=" Award/Certicates" {...a11yProps(4)} />
                             </Tabs>
                             <TabPanel className="resume-tabpanel" value={value} index={0}>
-                                <Education/>
+                                <Education />
                             </TabPanel>
                             <TabPanel className="resume-tabpanel" value={value} index={1}>
-                                <WorkHistory/>
+                                <WorkHistory />
                             </TabPanel>
                             <TabPanel className="resume-tabpanel" value={value} index={2}>
-                                <ProgrammingSkill/>
+                                <ProgrammingSkill />
                             </TabPanel>
                             <TabPanel className="resume-tabpanel" value={value} index={3}>
-                                <Projects/>
+                                <Projects />
                             </TabPanel>
                             <TabPanel className="resume-tabpanel" value={value} index={4}>
-                                <Awards/>
+                                <Awards />
                             </TabPanel>
 
                         </Box>
