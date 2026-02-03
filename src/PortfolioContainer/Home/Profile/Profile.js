@@ -20,19 +20,21 @@ const Profile = () => {
                         </div>
                         <div className="profile-details-name">
                             <span className="primary-text">
-                                Hello, I'M <span className="highlighted-text">Raj Gupta {localStorage.getItem('count') || ""}</span>
+                                Hello, I'M <span className="highlighted-text">Raj Gupta</span>
                             </span>
                         </div>
                         <div className="profile-details-role">
                             <h1>
-                                <Typical
-                                    loop={Infinity}
-                                    steps={[
-                                        "Software Developer ⌨️", 1300,
-                                        "Frontend Specialist 🚀", 1300,
-                                        "React & Next.js Dev ⚛️", 1300,
-                                    ]}
-                                />
+                                <div className="typical-wrapper">
+                                    <Typical
+                                        loop={Infinity}
+                                        steps={[
+                                            "Software Developer ⌨️", 1300,
+                                            "Frontend Specialist 🚀", 1300,
+                                            "React & Next.js Dev ⚛️", 1300,
+                                        ]}
+                                    />
+                                </div>
                             </h1>
                             <span className="profile-role-tagline">
                                 Knack of building applications with front end operations.

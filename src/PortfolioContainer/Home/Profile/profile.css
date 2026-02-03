@@ -83,18 +83,32 @@
 }
 
 .profile-details-role h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    /* Better fit for elite gallery */
     font-family: var(--font-serif);
     font-weight: 700;
     margin: 0;
-    line-height: 1.1;
+    line-height: 1.2;
     color: var(--text-primary);
-    min-height: 4.5rem;
-    /* Prevents jumping during animation */
-    display: block;
+    min-height: 4.8rem;
+    /* Lock height to prevent tagline jitter */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
     opacity: 0;
-    animation: fadeInUp 1s ease 0.3s forwards;
+    transform: translate3d(0, 30px, 0);
+    /* Hardware accelerated */
+    animation: fadeInUp 0.8s ease 0.3s forwards;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+.typical-wrapper {
+    width: 100%;
+    display: inline-block;
+    transform: translateZ(0);
+    /* Force GPU layering to stop vibration */
 }
 
 .profile-details-role h1 .highlighted-text {
@@ -119,14 +133,17 @@
 
 .profile-role-tagline {
     font-size: 18px;
-    margin: 20px 0 0 0;
+    margin: 15px 0 0 0;
+    /* Stabilized margin */
     font-family: var(--font-sans);
     font-weight: 300;
     color: var(--text-secondary);
     max-width: 80%;
+    display: block;
 
     opacity: 0;
     animation: fadeInUp 1s ease 0.6s forwards;
+    transform: translateZ(0);
 }
 
 /* --- BUTTONS --- */
