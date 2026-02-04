@@ -39,11 +39,11 @@ const Contactme = () => {
                                 </div>
                                 <div className="contact-item">
                                     <span><GitHubIcon /></span>
-                                    <a href="https://github.com/raj8859">raj8859</a>
+                                    <a href="https://github.com/rajgupta94">Github</a>
                                 </div>
                                 <div className="contact-item">
                                     <span><LinkedInIcon /></span>
-                                    <a href="https://www.linkedin.com/in/raj-gupta-a41118264">raj8859</a>
+                                    <a href="https://www.linkedin.com/in/raj-gupta-a41118264">LinkedIn</a>
                                 </div>
                             </div>
                             <div className="contact-right">
