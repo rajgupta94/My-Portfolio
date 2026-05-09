@@ -3,7 +3,7 @@ import './profile.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Typical from "react-typical"
+import Typewriter from './Typewriter';
 
 const Profile = () => {
     return (
@@ -26,12 +26,11 @@ const Profile = () => {
                         <div className="profile-details-role">
                             <h1>
                                 <div className="typical-wrapper">
-                                    <Typical
-                                        loop={Infinity}
-                                        steps={[
-                                            "Software Developer ⌨️", 1300,
-                                            "Frontend Specialist 🚀", 1300,
-                                            "React & Next.js Dev ⚛️", 1300,
+                                    <Typewriter
+                                        words={[
+                                            "Software Developer ⌨️",
+                                            "Frontend Specialist 🚀",
+                                            "React & Next.js Dev ⚛️",
                                         ]}
                                     />
                                 </div>

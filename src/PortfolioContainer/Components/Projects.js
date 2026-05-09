@@ -5,6 +5,50 @@ const Projects = () => {
     return (
         <>
             <div className="resume-details-container">
+                {/* Tasskr */}
+                <div className="resume-detail-main resume-detail-main4">
+                    <div className="resume-college-info">
+                        <div className="project-header">
+                            <span>Tasskr- AI Task Management System</span>
+                            <div className="project-links">
+                                <a href="https://github.com/rajgupta94/Tasskr" target="_blank" rel="noopener noreferrer">Github</a>
+                                <span>|</span>
+                                <a href="https://tasskr.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            </div>
+                        </div>
+                        <div className="resume-work-description">
+                            <p className="project-sub-heading">Developed a full-stack AI-powered task management platform using Node.js, MongoDB, and modern frontend technologies.</p>
+                            <ul>
+                                <li>Built an interactive and responsive frontend with focus on productivity UX, including real-time updates and intuitive flows.</li>
+                                <li>Integrated OpenAI-powered AI features including AI Chatbot, AI Planner, task suggestions, and insights.</li>
+                                <li>Implemented real-time collaboration and team chat using efficient data synchronization techniques.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                {/* LIVEBAZ */}
+                <div className="resume-detail-main resume-detail-main4">
+                    <div className="resume-college-info">
+                        <div className="project-header">
+                            <span>LIVEBAZ – Real-Time Football Score & Analytics Platform</span>
+                            <div className="project-links">
+                                <a href="https://github.com/rajgupta94/Livebaz" target="_blank" rel="noopener noreferrer">Github</a>
+                                <span>|</span>
+                                <a href="https://livebaz.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            </div>
+                        </div>
+                        <div className="resume-work-description">
+                            <p className="project-sub-heading">Developed a full-stack real-time football score platform using Next.js (App Router).</p>
+                            <ul>
+                                <li>Engineered reusable component architecture and efficient state handling, reducing re-renders and improving performance by ~30%.</li>
+                                <li>Integrated third-party sports APIs to display 100+ live matches with real-time updates and optimized fetching.</li>
+                                <li>Implemented AI-powered match insights and dynamic dashboards for enhanced user engagement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 {/* FineBank */}
                 <div className="resume-detail-main resume-detail-main4">
                     <div className="resume-college-info">
@@ -19,9 +63,9 @@ const Projects = () => {
                         <div className="resume-work-description">
                             <p className="project-sub-heading">A full-stack digital banking web application enabling users to manage accounts, track expenses, and perform secure transactions in real-time.</p>
                             <ul>
-                                <li><strong>Frontend:</strong> Built with Next.js and Tailwind CSS, ensuring a sleek, responsive, and user-friendly interface with smooth animations and intuitive navigation.</li>
-                                <li><strong>Backend:</strong> Developed using Node.js and Express.js with MongoDB for secure data management and authentication using JWT.</li>
-                                <li>Implemented key features like user authentication, expense tracking, transaction history, and financial analytics dashboard.</li>
+                                <li><strong>Frontend:</strong> Built with Next.js and Tailwind CSS, ensuring a sleek, responsive, and user-friendly interface.</li>
+                                <li><strong>Backend:</strong> Developed using Node.js and Express.js with MongoDB for secure data management.</li>
+                                <li>Implemented key features like user authentication, expense tracking, and financial analytics dashboard.</li>
                             </ul>
                         </div>
                     </div>

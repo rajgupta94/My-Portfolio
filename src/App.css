@@ -125,66 +125,56 @@ h6 {
   }
 }
 
-/* --- BUTTONS (ELEGANT) --- */
+/* --- BUTTONS (MODERN PREMIUM) --- */
 .btn {
-  border-radius: 2px;
-  /* Sharp edges for classic look */
+  border-radius: 12px;
+  /* Soft modern corners */
   padding: 14px 35px;
+  min-width: 160px;
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 2px;
+  font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border: 1px solid var(--primary-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
-  background: transparent;
-  color: var(--primary-color);
 }
 
-.btn::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
+/* Hire Me (Primary - Solid Gold) */
+.primary-btn {
   background: var(--primary-color);
-  transition: width 0.3s ease-in-out;
-  z-index: -1;
-}
-
-.btn:hover::after {
-  width: 100%;
-}
-
-.btn:hover {
   color: #0A192F !important;
-  /* Force readable dark text on light hover backgrounds */
+  border: 2px solid var(--primary-color);
+}
+
+.primary-btn:hover {
+  background: transparent;
+  color: var(--primary-color) !important;
   box-shadow: var(--gold-shadow);
   transform: translateY(-3px);
 }
 
-[data-theme="dark"] .btn:hover {
-  color: #F8FAFC !important;
-  /* Light text for dark hover states if needed, but gold bg usually needs dark text */
+/* Get Resume (Secondary - Outline/Ghost) */
+.highlighted-btn {
+  background: transparent;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color);
 }
 
-/* Specific fix for Primary Button hover text */
-.primary-btn:hover {
-  color: var(--secondary-color) !important;
+.highlighted-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+  transform: translateY(-3px);
 }
 
-.primary-btn {
-  background: var(--primary-color);
-  color: var(--bg-primary);
-}
-
-.primary-btn::after {
-  background: var(--white);
+.btn:active {
+  transform: translateY(-1px);
 }
 
 .scroll-up button {
