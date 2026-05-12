@@ -1,7 +1,7 @@
 import React from 'react';
 import './profile.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import MailIcon from '@mui/icons-material/Mail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Typewriter from './Typewriter';
 
@@ -15,7 +15,7 @@ const Profile = () => {
                             <div className="colz-icons">
                                 <a href="https://www.linkedin.com/in/raj-gupta-a41118264"><LinkedInIcon /></a>
                                 <a href="https://github.com/"><GitHubIcon /></a>
-                                <a href="mailto:rajgupta84639@gmail.com"><AlternateEmailIcon /></a>
+                                <a href="mailto:rajgupta84639@gmail.com"><MailIcon /></a>
                             </div>
                         </div>
                         <div className="profile-details-name">

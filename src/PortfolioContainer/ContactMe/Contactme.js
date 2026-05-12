@@ -2,7 +2,7 @@ import React from 'react'
 import LineBar from '../Components/LineBar'
 import ContactsIcon from '@mui/icons-material/Contacts';
 import CallIcon from '@mui/icons-material/Call';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import MailIcon from '@mui/icons-material/Mail';
 import './contact.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -34,7 +34,7 @@ const Contactme = () => {
                                     <a href="tel:+91-9410812659">9410812659</a>
                                 </div>
                                 <div className="contact-item">
-                                    <span><AlternateEmailIcon /></span>
+                                    <span><MailIcon /></span>
                                     <a href="mailto:rajgupta8469@gmail.com">rajgupta8469@gmail.com</a>
                                 </div>
                                 <div className="contact-item">
